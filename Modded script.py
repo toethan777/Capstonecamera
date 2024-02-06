@@ -11,13 +11,8 @@ pipeline = dai.Pipeline()
 
 # Define a source - color camera
 cam = pipeline.create(dai.node.MonoCamera)
-xoutRight = pipeline.create(dai.node.XLinkOut)
+cam.setNumFramesPool(24)
 
-xoutRight.setStreamName("right")
-
-# Properties
-cam.setCamera("right")
-cam.setResolution(dai.MonoCameraProperties.SensorResolution.THE_720_P)
 
 # VideoEncoder
 jpeg = pipeline.create(dai.node.VideoEncoder)
@@ -35,7 +30,7 @@ script.setScript("""
     from http.server import BaseHTTPRequestHandler, HTTPServer
 
     PORT = 8080
-
+    Device.setIrFloodLightBrightness(200)
     def get_ip_address(ifname):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         return socket.inet_ntoa(fcntl.ioctl(
@@ -84,12 +79,18 @@ script.setScript("""
 """)
 
 # Connections
-#cam.video.link(jpeg.input)
-#jpeg.bitstream.link(script.inputs['jpeg'])
-cam.out.link(xoutRight.input)
+cam.out.link(jpeg.input)
+jpeg.bitstream.link(script.inputs['jpeg'])
+
 
 # Connect to device with pipeline
-with dai.Device(pipeline) as device:
-    while not device.isClosed():
-        
-        time.sleep(1)
+#with dai.Device(pipeline) as device:
+#    while not device.isClosed():
+#       time.sleep(1)
+
+# Flash the pipeline
+(f, bl) = dai.DeviceBootloader.getFirstAvailableDevice()
+bootloader = dai.DeviceBootloader(bl)
+progress = lambda p : print(f'Flashing progress: {p*100:.1f}%')
+bootloader.flash(progress, pipeline)
+
