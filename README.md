@@ -1,6 +1,6 @@
 # Capstone Camera things!
 Click [here](https://shop.luxonis.com/products/oak-d-pro-w) for the Oak-D Pro W specs
-## Basic structure/terminology
+## DepthAI scripting, basic structure/terminology
 [Pipeline](https://docs.luxonis.com/projects/api/en/latest/components/pipeline/): collection of nodes and links between them. 
 
 [Nodes](https://docs.luxonis.com/projects/api/en/latest/components/nodes/): Provides functionality of camera. Below are nodes that we potentially need: 
