@@ -1,9 +1,9 @@
 # Capstone Camera things!
 
 ## Basic structure/terminology
-Pipeline: collection of nodes and links between them. 
+[Pipeline](https://docs.luxonis.com/projects/api/en/latest/components/pipeline/): collection of nodes and links between them. 
 
-Nodes: Provides functionality of camera. Below are nodes that we potentially need: 
+[Nodes](https://docs.luxonis.com/projects/api/en/latest/components/nodes/): Provides functionality of camera. Below are nodes that we potentially need: 
 ```
                ┌─────────────────┐ 
                │                 │         out 
@@ -33,9 +33,9 @@ input       │     Network       │ passthrough
 ```
  
 
-Messages: How nodes can communicate with each other. For our purposes, we need to create a script. This currently contains the MJPEG streaming code and includes IR nighttime flooding.
+[Messages](https://docs.luxonis.com/projects/api/en/latest/components/messages/): How nodes can communicate with each other. For our purposes, we need to create a script. This currently contains the MJPEG streaming code and includes IR nighttime flooding.
 
-Bootloader: Small program in the booting process of the camera. The cameras came with a factory bootloader; thus, nothing is running on it until you flash a program to it.
+[Bootloader](https://docs.luxonis.com/projects/api/en/latest/components/bootloader/?highlight=boot): Small program in the booting process of the camera. The cameras came with a factory bootloader; thus, nothing is running on it until you flash a program to it.
 Below is a skeleton of what needs to go into our script to flash our cameras: 
 
 ```
