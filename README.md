@@ -61,3 +61,5 @@ bootloader.flash(progress, pipeline)
 *Real Time Vessel detection from DVR.
 
 *Switch between Day (light) and Night (dark) mode, perhaps get ORDA on this for Neural Networking? 
+
+*Research Robothub for easier development of camera.
