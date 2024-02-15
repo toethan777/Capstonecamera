@@ -1,4 +1,4 @@
-# Capstone Camera things!!!
+# Capstone Camera things!
 
 ## Basic structure/terminology
 Pipeline: collection of nodes and links between them. 
