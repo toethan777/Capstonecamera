@@ -1,5 +1,7 @@
 # Capstone Camera things!
-Click [here](https://shop.luxonis.com/products/oak-d-pro-w) for the Oak-D Pro W specs
+Click [here](https://shop.luxonis.com/products/oak-d-pro-w) for the Oak-D Pro W specs.
+
+Click [here](https://github.com/luxonis/depthai-python) for cool scripts you can use on the camera.
 ## DepthAI scripting, basic structure/terminology
 [Pipeline](https://docs.luxonis.com/projects/api/en/latest/components/pipeline/): collection of nodes and links between them. 
 
