@@ -77,3 +77,6 @@ bootloader.flash(progress, pipeline)
 *Switch between Day (light) and Night (dark) mode, perhaps get ORDA on this for Neural Networking? 
 
 *Research Robothub for easier development of camera.
+## Other Notes
+
+We have statically set the IPs of both Oak-D cameras: one is `10.233.105.14`, and the other is `10.233.105.173`. If we want to change them or use them on a different network, we have to consult Mr. Chad Davis in the Power lab. If the camera setup is screwed up (e.g. soft bricking the camera after changing the IP) we have to use the Luxonis Programming board to manually factory flash the camera. More information can be found at [this link](https://github.com/luxonis/depthai-python).
