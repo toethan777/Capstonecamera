@@ -19,7 +19,7 @@ The copy command. Used for copying files and folders. This is usually formatted 
 The move command. Used for moving files and folders. This is usually formatted as `mv [file location] [file destination]`.
 
 ### rm
-The delete command. Used for deleting files and folders. Kinda dangerous. Especially `rm -rf [file location]`, also known as the recursive delete. DO NOT TYPE `rm -rf ~`, this will remove literally everything. We only have one server. Contact me if you do this.
+The delete command. Used for deleting files and folders. Kinda dangerous. Especially `rm -rf [file location]`, also known as the recursive delete. DO NOT TYPE `rm -rf ~`, this will remove literally everything. We only have one server. Contact me if you use the `rm -rf` command.
 
 ### touch
 Create a blank file.
